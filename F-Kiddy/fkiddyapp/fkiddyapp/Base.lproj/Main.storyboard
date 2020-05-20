@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Show Child View Controller-->
+        <scene sceneID="9tN-Sk-WIt">
+            <objects>
+                <viewController id="alk-yN-cWc" customClass="showChildViewController" customModule="fkiddyapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N8m-Oc-hNa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lf0-w7-gYA">
+                                <rect key="frame" x="0.0" y="50" width="414" height="758"/>
+                                <color key="backgroundColor" red="0.92891377210000003" green="0.85131865740000001" blue="0.79708319900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wdr-1V-epT">
+                                    <size key="itemSize" width="413" height="176"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pdM-y3-KJJ" customClass="CollectionViewCell" customModule="fkiddyapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="0.0" width="413" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VVa-2v-zNu">
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="176"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZ6-VT-Nl2">
+                                                    <rect key="frame" x="10" y="5" width="393" height="166"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-Nj-sPe">
+                                                            <rect key="frame" x="8" y="8" width="377" height="150"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="377" id="PmG-qW-xk0"/>
+                                                                <constraint firstAttribute="height" constant="150" id="t2h-oR-xag"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-x7-ZrJ">
+                                                            <rect key="frame" x="8" y="8" width="120" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zI-gs-idu">
+                                                            <rect key="frame" x="272" y="128" width="113" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="My Child is Lost!"/>
+                                                            <connections>
+                                                                <action selector="lostChildButton:" destination="alk-yN-cWc" eventType="touchUpInside" id="b4o-Bn-og1"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.93745011089999997" green="0.73256945610000002" blue="0.6581141949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wuh-Nj-sPe" firstAttribute="leading" secondItem="AZ6-VT-Nl2" secondAttribute="leading" constant="8" id="D14-Bb-2Dk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wuh-Nj-sPe" secondAttribute="trailing" constant="8" id="Geb-IU-nlE"/>
+                                                        <constraint firstItem="wuh-Nj-sPe" firstAttribute="top" secondItem="AZ6-VT-Nl2" secondAttribute="top" constant="8" id="TNd-CW-FR0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wuh-Nj-sPe" secondAttribute="bottom" constant="8" id="xeE-sN-s7m"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AZ6-VT-Nl2" secondAttribute="bottom" constant="5" id="KxT-5W-fA2"/>
+                                                <constraint firstAttribute="trailing" secondItem="AZ6-VT-Nl2" secondAttribute="trailing" constant="10" id="NPY-ke-v1J"/>
+                                                <constraint firstItem="AZ6-VT-Nl2" firstAttribute="leading" secondItem="VVa-2v-zNu" secondAttribute="leading" constant="10" id="h3I-OP-yep"/>
+                                                <constraint firstItem="AZ6-VT-Nl2" firstAttribute="top" secondItem="VVa-2v-zNu" secondAttribute="top" constant="5" id="tt0-xA-32Y"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="413" height="176"/>
+                                        <connections>
+                                            <outlet property="childImage" destination="zn9-x7-ZrJ" id="59p-im-N0K"/>
+                                            <outlet property="mylabel" destination="wuh-Nj-sPe" id="X16-1t-Als"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="alk-yN-cWc" id="GHE-je-Kto"/>
+                                    <outlet property="delegate" destination="alk-yN-cWc" id="pw0-Nw-6jg"/>
+                                    <outlet property="prefetchDataSource" destination="alk-yN-cWc" id="hN4-Be-Xho"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYg-y0-cNI">
+                                <rect key="frame" x="321" y="12" width="79" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Add Child"/>
+                                <connections>
+                                    <action selector="newChildButton:" destination="alk-yN-cWc" eventType="touchUpInside" id="cnV-xs-sYq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93921631569999997" green="0.8512321115" blue="0.78696292639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Gl-Oj-NfT" firstAttribute="trailing" secondItem="Lf0-w7-gYA" secondAttribute="trailing" id="FBj-qt-C2o"/>
+                            <constraint firstItem="Lf0-w7-gYA" firstAttribute="leading" secondItem="0Gl-Oj-NfT" secondAttribute="leading" id="Oy4-VJ-1OU"/>
+                            <constraint firstItem="0Gl-Oj-NfT" firstAttribute="bottom" secondItem="Lf0-w7-gYA" secondAttribute="bottom" id="rjF-Xy-FVq"/>
+                            <constraint firstItem="Lf0-w7-gYA" firstAttribute="top" secondItem="0Gl-Oj-NfT" secondAttribute="top" constant="50" id="wdV-T8-T3c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Gl-Oj-NfT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zm4-if-j0Z"/>
+                    <connections>
+                        <segue destination="TuT-uW-kZH" kind="show" identifier="addChild" id="bWu-eQ-Siv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6a-59-vEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="799.55357142857144"/>
+        </scene>
+        <!--New Child View Controller-->
+        <scene sceneID="8R5-C8-VFw">
+            <objects>
+                <viewController id="TuT-uW-kZH" customClass="newChildViewController" customModule="fkiddyapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zF2-iZ-Lxn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter child name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHI-bt-UmV">
+                                <rect key="frame" x="132" y="306" width="150" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchscreenlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="oTg-Lu-NHe">
+                                <rect key="frame" x="78" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKJ-aK-d8x">
+                                <rect key="frame" x="156" y="360" width="103" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="add my child"/>
+                                <connections>
+                                    <action selector="addChildButton:" destination="TuT-uW-kZH" eventType="touchUpInside" id="Tei-0o-t5y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93921631569999997" green="0.8512321115" blue="0.78696292639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="aqp-eh-lJd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YL4-xm-Ei0"/>
+                    <connections>
+                        <outlet property="child_name" destination="IHI-bt-UmV" id="awd-7S-AZg"/>
+                        <segue destination="alk-yN-cWc" kind="show" identifier="childCreated" id="8k0-it-yZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbk-kc-83O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.05797101449286" y="802.90178571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="fkiddyapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UT-r3-vL7">
+                                <rect key="frame" x="130" y="527" width="152" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Create New Parent"/>
+                                <connections>
+                                    <segue destination="Rgj-ns-ilm" kind="show" identifier="newParentButton" id="IKE-CZ-3gQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-RA-qlY">
+                                <rect key="frame" x="115" y="285" width="185" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-2Z-jXT">
+                                <rect key="frame" x="115" y="327" width="185" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oct-Vq-tlb">
+                                <rect key="frame" x="181" y="368" width="55" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bP9-93-qZt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqp-1K-smW">
+                                <rect key="frame" x="112" y="501" width="189" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchscreenlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iH6-bM-HHB">
+                                <rect key="frame" x="78" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95292013880000004" green="0.85134989019999996" blue="0.77706205839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TBG-2D-Kah"/>
+                    <connections>
+                        <outlet property="parent_password" destination="WZp-2Z-jXT" id="Rgb-Pr-4uf"/>
+                        <outlet property="parent_username" destination="QJS-RA-qlY" id="coc-0o-Qig"/>
+                        <segue destination="alk-yN-cWc" kind="show" identifier="login" id="lFb-B1-mO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--New Parent View Controller-->
+        <scene sceneID="8bD-5C-ZjR">
+            <objects>
+                <viewController id="Rgj-ns-ilm" customClass="newParentViewController" customModule="fkiddyapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EMH-6v-lYW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3M-Fe-miA">
+                                <rect key="frame" x="119" y="286" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cpa-jC-zTg">
+                                <rect key="frame" x="119" y="331" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-DM-9Si">
+                                <rect key="frame" x="119" y="373" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchscreenlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ARc-Yb-op5">
+                                <rect key="frame" x="78" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wf-RK-s7k">
+                                <rect key="frame" x="97" y="487" width="221" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Create new Parent Account"/>
+                                <connections>
+                                    <action selector="newParentButton:" destination="Rgj-ns-ilm" eventType="touchUpInside" id="hMr-nK-08a"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-fw-JPp">
+                                <rect key="frame" x="119" y="415" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93921631569999997" green="0.8512321115" blue="0.78696292639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bJm-kx-Edo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cTe-7b-j1M"/>
+                    <connections>
+                        <outlet property="parent_name" destination="a3M-Fe-miA" id="ZXV-iT-m0S"/>
+                        <outlet property="parent_password" destination="RqJ-DM-9Si" id="4RA-AB-DtX"/>
+                        <outlet property="parent_username" destination="Cpa-jC-zTg" id="iC3-dI-aW0"/>
+                        <outlet property="phone_number" destination="ba7-fw-JPp" id="F6k-LL-aYk"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="parentCreated" id="Wo4-Uy-BGG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezk-x3-lk4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="117.85714285714285"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="RGr-QX-VJA">
+            <objects>
+                <viewController id="m3K-yd-74L" customClass="cameraViewController" customModule="fkiddyapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Byr-VF-Dxf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3Nq-6j-zg6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y1P-G4-Gt0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qM7-Hl-ScQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchscreenlogo.png" width="150" height="150"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8k0-it-yZM"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,6 @@
+module Pods_fkiddyapp {
+  umbrella header "Pods-fkiddyapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
