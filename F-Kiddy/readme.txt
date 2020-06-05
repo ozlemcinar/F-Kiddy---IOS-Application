@@ -11,3 +11,7 @@ How to run code:
 	Step 1: make a connection with your mac and iphone
 	Step 2: run the code by clicking play button in xCode.
 	
+
+Project Demo can be watched on: 
+	 https://youtu.be/eTwPaRcDrQI?t=562
+	
